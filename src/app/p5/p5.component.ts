@@ -1,14 +1,13 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import * as p5 from 'p5'
-import {addDoc, collection, Firestore, getDocs, getDocsFromServer} from "@angular/fire/firestore";
-import {getDoc} from "@angular/fire/firestore/firebase";
-import {QuerySnapshot} from "@firebase/firestore";
+import p5 from 'p5'
+import {addDoc, collection, Firestore, getDocs} from "@angular/fire/firestore";
 
 @Component({
-  selector: 'app-p5',
-  templateUrl: './p5.component.html',
-  styleUrls: ['./p5.component.scss']
+    selector: 'app-p5',
+    templateUrl: './p5.component.html',
+    styleUrls: ['./p5.component.scss'],
+    standalone: false
 })
 export class P5Component implements OnInit  {
   canvas: any;
