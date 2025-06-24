@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ralphleuq-10732": {
+      "hosting": {
+        "ralphleuq": [
+          "ralphleuq-10732"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ralphleuq-10732"
+  }
+}
