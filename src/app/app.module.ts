@@ -9,13 +9,19 @@ import {environment} from "../environments/environment";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 import {getFirestore, provideFirestore} from "@angular/fire/firestore";
 import {PerlinComponent} from "./perlin/perlin.component";
+import {FlowfieldComponent} from "./flowfield/flowfield.component";
+import {IntroComponent} from "./intro/intro.component";
+import {WowComponent} from "./wow/wow.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     P5Component,
+    IntroComponent,
     HomeComponent,
-    PerlinComponent
+    PerlinComponent,
+    FlowfieldComponent,
+    WowComponent
   ],
   imports: [
     BrowserModule,

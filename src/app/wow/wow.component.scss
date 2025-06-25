@@ -1,0 +1,18 @@
+#rick {
+  top: 5%;
+  position: absolute;
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 2s;
+}
+@keyframes run {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 10%;
+  }
+  100% {
+    left: 00%;
+  }
+}

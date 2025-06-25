@@ -18,12 +18,4 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
   }
 
-  playAudio(): void {
-    this.hideContent = false;
-    const audio = document.getElementById('myAudio') as HTMLAudioElement;
-    if (audio) {
-      audio.play();
-    }
-  }
-
 }
