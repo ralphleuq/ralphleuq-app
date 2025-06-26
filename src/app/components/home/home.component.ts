@@ -10,12 +10,30 @@ export class HomeComponent implements OnInit, AfterViewInit {
   hideContent = true;
   title = 'ralphleuq';
 
+  isSidebarOpen = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit() {
+    this.playAudio();
   }
 
+  playAudio(): void {
+    const audio = document.getElementById('myAudio') as HTMLAudioElement;
+    if (audio) {
+      audio.play();
+    }
+  }
+
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+  closeSidebar() {
+    this.isSidebarOpen = false;
+  }
 }

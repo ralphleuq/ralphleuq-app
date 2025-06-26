@@ -1,0 +1,19 @@
+
+<div class="text-5xl">Welcome to most danggereous websit of the planet C-53!</div>
+
+  <div #sketchholder class="p5 mt-8 h-[80vh] overflow-hidden touch-none" id="sketch-holder">
+    <div class="absolute z-10 flex gap-2 bg-white/90 p-2 rounded-b-md shadow-md">
+      <div *ngFor="let pallete of palettes; let i = index"
+            class="w-8 h-8 p-[2px] rounded-full border transition-all duration-150"
+            [class.border-black]="i === selectedColorIndex"
+            [class.border-4]="i === selectedColorIndex"
+            [class.border-gray-300]="i !== selectedColorIndex"
+            (click)="selectColor(pallete.colorValue, i)"
+          >
+        <div
+          class="w-full h-full rounded-full"
+          [ngStyle]="{ 'background-color': pallete.colorName }"
+        ></div>
+      </div>
+    </div>
+  </div>

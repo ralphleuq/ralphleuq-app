@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {P5Component} from "./p5/p5.component";
-import {HomeComponent} from "./home/home.component";
-import {PerlinComponent} from "./perlin/perlin.component";
-import {FlowfieldComponent} from "./flowfield/flowfield.component";
-import {IntroComponent} from "./intro/intro.component";
-import {WowComponent} from "./wow/wow.component";
+import {P5Component} from "./components/p5/p5.component";
+import {HomeComponent} from "./components/home/home.component";
+import {PerlinComponent} from "./components/perlin/perlin.component";
+import {FlowfieldComponent} from "./components/flowfield/flowfield.component";
+import {IntroComponent} from "./components/intro/intro.component";
+import {WowComponent} from "./components/wow/wow.component";
+import {TimangTvComponent} from "./components/timang-tv/timang-tv.component";
 
 const routes: Routes = [
 
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: "perlin", component: PerlinComponent, pathMatch: "full" },
       { path: "flowfield", component: FlowfieldComponent, pathMatch: "full" },
       { path: "wow", component: WowComponent, pathMatch: "full" },
+      { path: "timang-tv", component: TimangTvComponent, pathMatch: "full" },
     ],
   },
 ];

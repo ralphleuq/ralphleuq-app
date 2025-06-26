@@ -1,5 +1,6 @@
 #rick {
-  top: 5%;
+  top: 8%;
+  z-index: -10;
   position: absolute;
   animation: linear infinite;
   animation-name: run;
@@ -7,12 +8,12 @@
 }
 @keyframes run {
   0% {
-    left: 0%;
+    left: -20%;
   }
   50% {
-    left: 10%;
+    left: 00%;
   }
   100% {
-    left: 00%;
+    left: -20%;
   }
 }

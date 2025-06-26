@@ -12,13 +12,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.playAudio();
   }
 
-  playAudio(): void {
-    const audio = document.getElementById('myAudio') as HTMLAudioElement;
-    if (audio) {
-      audio.play();
-    }
-  }
 }

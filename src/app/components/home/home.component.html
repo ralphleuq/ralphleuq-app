@@ -1,0 +1,42 @@
+<!-- Always-visible Header with hamburger -->
+<div class="fixed top-0 left-0 w-full flex items-center bg-gray-800 text-white p-4 z-[9999]">
+  <button (click)="toggleSidebar()" class="mr-4">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+  <h1 class="text-xl font-bold">wow sidebar</h1>
+</div>
+
+
+<!-- Toggleable Sidebar -->
+<div
+  [ngClass]="{ '-translate-x-full': !isSidebarOpen }"
+  class="fixed top-0 left-0 w-64 h-screen bg-gray-800 text-white p-4 transform transition-transform duration-300 ease-in-out z-[9998]"
+>
+  <h2 class="text-xl font-bold mb-4">Sidebar</h2>
+  <ul class="space-y-2">
+    <li><a routerLink="/home/p5" (click)="closeSidebar()" routerLinkActive="bg-gray-700" class="block hover:bg-gray-700 p-2 rounded">p5</a></li>
+    <li><a routerLink="/home/flowfield" (click)="closeSidebar()" routerLinkActive="bg-gray-700" class="block hover:bg-gray-700 p-2 rounded">flowfield</a></li>
+    <li><a routerLink="/home/timang-tv" (click)="closeSidebar()" routerLinkActive="bg-gray-700" class="block hover:bg-gray-700 p-2 rounded">timang tv</a></li>
+  </ul>
+</div>
+
+<!-- Overlay on mobile when sidebar is open -->
+<div
+  class="fixed inset-0 bg-black/20"
+  *ngIf="isSidebarOpen"
+  (click)="closeSidebar()"
+></div>
+
+<!-- Main Content -->
+<div class="flex-1  p-10">
+  <app-wow></app-wow>
+  <router-outlet></router-outlet>
+</div>
+
+
+<!--<audio hidden="hidden" id="myAudio" autoplay controls src="/assets/nggyu.mp3" type="audio/mp3"></audio>-->
+
+
