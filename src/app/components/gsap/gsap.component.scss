@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.box {
+  width: 220px;                  // One frame width
+  height: 261px;                 // Full image height
+  background-image: url('/assets/rick-sprites.png'); // Adjust path as needed
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 5060px auto; // Prevents scaling artifacts
+  margin: 0 auto;
+  //transform: scale(2); /* 3x zoom, change as needed */
+  transform-origin: top left; /* or center if you want it centered */
+}
+
+
+.box-wrapper {
+  display: inline-block;
+  transform: scale(2);
+  transform-origin: center;
+}

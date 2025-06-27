@@ -13,6 +13,9 @@ import {FlowfieldComponent} from "./components/flowfield/flowfield.component";
 import {IntroComponent} from "./components/intro/intro.component";
 import {WowComponent} from "./components/wow/wow.component";
 import {TimangTvComponent} from "./components/timang-tv/timang-tv.component";
+import {AboutMeComponent} from "./components/about-me/about-me.component";
+import {GsapComponent} from "./components/gsap/gsap.component";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -23,11 +26,14 @@ import {TimangTvComponent} from "./components/timang-tv/timang-tv.component";
     PerlinComponent,
     FlowfieldComponent,
     WowComponent,
-    TimangTvComponent
+    TimangTvComponent,
+    AboutMeComponent,
+    GsapComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [
     provideFirebaseApp(() => initializeApp(environment.firebase)),

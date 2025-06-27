@@ -51,7 +51,7 @@ export class P5Component implements OnInit, AfterViewInit  {
         s.strokeWeight(this.sw);
         s.rect(0, 0, s.width, s.height);
         s.stroke(this.palettes[0].colorValue);
-        // this.initializeLines(s);
+        this.initializeLines(s);
       };
 
       let drawLine = () => {
@@ -64,7 +64,7 @@ export class P5Component implements OnInit, AfterViewInit  {
       };
 
       s.mouseReleased = () => {
-        // this.saveData({data: lines});
+        this.saveData({data: lines});
       };
 
       s.keyPressed = () => {
