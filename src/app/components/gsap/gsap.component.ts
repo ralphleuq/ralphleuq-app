@@ -15,7 +15,7 @@ export class GsapComponent implements OnInit, AfterViewInit {
   private readonly totalFrames = 23;
   private readonly frameWidth = 220;
 
-  energy = 0; // How fast Rick is dancing
+  energy = 0.7; // How fast Rick is dancing
   private lastFrameTime = 0;
   private audio = new Audio('assets/nggyu.mp3');
   private context!: AudioContext;
@@ -32,8 +32,17 @@ export class GsapComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    document.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+    document.addEventListener('touchmove', this.preventTouchMove, { passive: false });
   }
+
+  ngOnDestroy() {
+    document.removeEventListener('touchmove', this.preventTouchMove);
+  }
+
+  private preventTouchMove = (e: TouchEvent) => {
+    e.preventDefault();
+  };
+
 
   ngAfterViewInit() {
     gsap.registerPlugin(ScrollTrigger);

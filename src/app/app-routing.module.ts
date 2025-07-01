@@ -23,7 +23,7 @@ const routes: Routes = [
       { path: "wow", component: WowComponent, pathMatch: "full" },
       { path: "timang-tv", component: TimangTvComponent, pathMatch: "full" },
       { path: "meaning-of-life", component: GsapComponent, pathMatch: "full" },
-      { path: "about-me", component: AboutMeComponent, pathMatch: "full" },
+      { path: "hatdog", component: AboutMeComponent, pathMatch: "full" },
     ],
   },
 ];
